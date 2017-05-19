@@ -258,7 +258,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
     /*Check if the date is off : unselectable*/
     isDayOff(day) {
         return this.allDaysOff ||
-            (this.disableDaysBefore && moment(day.date).isBefore(moment(), 'day')) ||
+            (this.disableDaysBefore && moment(day.date).isBefore(this.disableDaysBefore, 'day')) ||
             (!!this.disableDaysAfter && moment(day.date).isAfter(this.disableDaysAfter, 'day')) ||
             ((this.weekDaysOff instanceof Array) && this.weekDaysOff.some(function (dayOff) {
                 return day.date.day() === dayOff;
