@@ -160,6 +160,7 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                         day.mdp.selected = !day.mdp.selected;
                         if (day.mdp.selected) {
                             this.projectScope.push(day.date);
+                            // console.log('this project scope = ' + this.projectScope); // for testing keep!
                         }
                         else {
                             var idx = -1;
@@ -258,18 +259,18 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                 /*Check if the date is off : unselectable*/
                 MultipleDatePickerComponent.prototype.isDayOff = function (day) {
                     return this.allDaysOff ||
-                        (this.disableDaysBefore && moment(day.date).isBefore(moment(), 'day')) ||
+                        (this.disableDaysBefore && moment(day.date).isBefore(this.disableDaysBefore, 'day')) ||
                         (!!this.disableDaysAfter && moment(day.date).isAfter(this.disableDaysAfter, 'day')) ||
-                        ((this.weekDaysOff === Array) && this.weekDaysOff.some(function (dayOff) {
+                        ((this.weekDaysOff instanceof Array) && this.weekDaysOff.some(function (dayOff) {
                             return day.date.day() === dayOff;
                         })) ||
-                        ((this.daysOff === Array) && this.daysOff.some(function (dayOff) {
+                        ((this.daysOff instanceof Array) && this.daysOff.some(function (dayOff) {
                             return day.date.isSame(dayOff, 'day');
                         })) ||
-                        ((this.daysAllowed === Array) && !this.daysAllowed.some(function (dayAllowed) {
+                        ((this.daysAllowed instanceof Array) && !this.daysAllowed.some(function (dayAllowed) {
                             return day.date.isSame(dayAllowed, 'day');
                         })) ||
-                        ((this.highlightDays === Array) && this.highlightDays.some(function (highlightDay) {
+                        ((this.highlightDays instanceof Array) && this.highlightDays.some(function (highlightDay) {
                             return day.date.isSame(highlightDay.date, 'day') && !highlightDay.selectable;
                         }));
                 };
@@ -304,7 +305,7 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                                 otherMonth: false
                             },
                         };
-                        if ((_this.highlightDays === Array)) {
+                        if ((_this.highlightDays instanceof Array)) {
                             var hlDay = _this.highlightDays.filter(function (d) {
                                 return day.date.isSame(d.date, 'day');
                             });
@@ -453,17 +454,17 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
         }
     };
 });
-System.register("multiple-date-picker.module", ["@angular/core", "@angular/platform-browser", "@angular/forms", "multiple-date-picker.component"], function (exports_3, context_3) {
+System.register("multiple-date-picker.module", ["@angular/core", "@angular/common", "@angular/forms", "multiple-date-picker.component"], function (exports_3, context_3) {
     "use strict";
     var __moduleName = context_3 && context_3.id;
-    var core_2, platform_browser_1, forms_2, multiple_date_picker_component_1, MultipleDatePickerModule;
+    var core_2, common_1, forms_2, multiple_date_picker_component_1, MultipleDatePickerModule;
     return {
         setters: [
             function (core_2_1) {
                 core_2 = core_2_1;
             },
-            function (platform_browser_1_1) {
-                platform_browser_1 = platform_browser_1_1;
+            function (common_1_1) {
+                common_1 = common_1_1;
             },
             function (forms_2_1) {
                 forms_2 = forms_2_1;
@@ -481,7 +482,7 @@ System.register("multiple-date-picker.module", ["@angular/core", "@angular/platf
             MultipleDatePickerModule = __decorate([
                 core_2.NgModule({
                     imports: [
-                        platform_browser_1.BrowserModule,
+                        common_1.CommonModule,
                         forms_2.FormsModule
                     ],
                     declarations: [

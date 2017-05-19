@@ -5,10 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var template_1 = require("./template");
@@ -270,7 +267,7 @@ var MultipleDatePickerComponent = MultipleDatePickerComponent_1 = (function () {
                     past: true,
                     future: true,
                     otherMonth: false
-                },
+                }
             };
             if ((_this.highlightDays instanceof Array)) {
                 var hlDay = _this.highlightDays.filter(function (d) {
@@ -307,101 +304,77 @@ var MultipleDatePickerComponent = MultipleDatePickerComponent_1 = (function () {
     return MultipleDatePickerComponent;
 }());
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], MultipleDatePickerComponent.prototype, "highlightDays", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "highlightDays");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "dayClick", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "dayClick");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "dayHover", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "dayHover");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "rightClick", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "rightClick");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], MultipleDatePickerComponent.prototype, "monthChanged", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "monthChanged");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], MultipleDatePickerComponent.prototype, "fontAwesome", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "fontAwesome");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], MultipleDatePickerComponent.prototype, "matIcons", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "matIcons");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "monthClick", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "monthClick");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], MultipleDatePickerComponent.prototype, "weekDaysOff", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "weekDaysOff");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "allDaysOff", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "allDaysOff");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], MultipleDatePickerComponent.prototype, "daysAllowed", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "daysAllowed");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], MultipleDatePickerComponent.prototype, "disableNavigation", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "disableNavigation");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], MultipleDatePickerComponent.prototype, "disallowBackPastMonths", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "disallowBackPastMonths");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "disallowGoFuturMonths", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "disallowGoFuturMonths");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], MultipleDatePickerComponent.prototype, "showDaysOfSurroundingMonths", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "showDaysOfSurroundingMonths");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], MultipleDatePickerComponent.prototype, "cssDaysOfSurroundingMonths", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "cssDaysOfSurroundingMonths");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "fireEventsForDaysOfSurroundingMonths", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "fireEventsForDaysOfSurroundingMonths");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], MultipleDatePickerComponent.prototype, "disableDaysBefore", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "disableDaysBefore");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], MultipleDatePickerComponent.prototype, "disableDaysAfter", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "disableDaysAfter");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "changeYearPast", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "changeYearPast");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], MultipleDatePickerComponent.prototype, "changeYearFuture", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "changeYearFuture");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Array)
-], MultipleDatePickerComponent.prototype, "projectScope", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "projectScope");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], MultipleDatePickerComponent.prototype, "sundayFirstDay", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "sundayFirstDay");
 __decorate([
-    core_1.Input(),
-    __metadata("design:type", Array)
-], MultipleDatePickerComponent.prototype, "_projectScope", void 0);
+    core_1.Input()
+], MultipleDatePickerComponent.prototype, "_projectScope");
 MultipleDatePickerComponent = MultipleDatePickerComponent_1 = __decorate([
     core_1.Component({
         selector: 'multiple-date-picker',
@@ -414,8 +387,7 @@ MultipleDatePickerComponent = MultipleDatePickerComponent_1 = __decorate([
                 multi: true
             }
         ]
-    }),
-    __metadata("design:paramtypes", [])
+    })
 ], MultipleDatePickerComponent);
 exports.MultipleDatePickerComponent = MultipleDatePickerComponent;
 var MultipleDatePickerComponent_1;
