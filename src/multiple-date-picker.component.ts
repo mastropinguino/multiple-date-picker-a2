@@ -260,16 +260,16 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
         return this.allDaysOff ||
             (this.disableDaysBefore && moment(day.date).isBefore(moment(), 'day')) ||
             (!!this.disableDaysAfter && moment(day.date).isAfter(this.disableDaysAfter, 'day')) ||
-            ((this.weekDaysOff === Array) && this.weekDaysOff.some(function (dayOff) {
+            ((this.weekDaysOff instanceof Array) && this.weekDaysOff.some(function (dayOff) {
                 return day.date.day() === dayOff;
             })) ||
-            ((this.daysOff === Array) && this.daysOff.some(function (dayOff) {
+            ((this.daysOff instanceof Array) && this.daysOff.some(function (dayOff) {
                 return day.date.isSame(dayOff, 'day');
             })) ||
-            ((this.daysAllowed === Array) && !this.daysAllowed.some(function (dayAllowed) {
+            ((this.daysAllowed instanceof Array) && !this.daysAllowed.some(function (dayAllowed) {
                 return day.date.isSame(dayAllowed, 'day');
             })) ||
-            ((this.highlightDays === Array) && this.highlightDays.some(function (highlightDay) {
+            ((this.highlightDays instanceof Array) && this.highlightDays.some(function (highlightDay) {
                 return day.date.isSame(highlightDay.date, 'day') && !highlightDay.selectable;
             }));
     }
@@ -310,7 +310,7 @@ export class MultipleDatePickerComponent implements OnInit, ControlValueAccessor
                         otherMonth: false
                     },
                 }
-                if ((this.highlightDays === Array)) {
+                if ((this.highlightDays instanceof Array)) {
                     var hlDay = this.highlightDays.filter(function (d) {
                         return day.date.isSame(d.date, 'day');
                     });
