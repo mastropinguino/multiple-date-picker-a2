@@ -7,12 +7,13 @@
     "sourceMap": false,
     "moduleResolution": "node",
     "declaration": true,
-    "outDir": "../dist"
+    "outDir": "../dist",
+    "lib": ["es2015", "dom"]
   },
   "files": [
     "../src/multiple-date-picker.module.ts"
   ],
-    "angularCompilerOptions": {
+  "angularCompilerOptions": {
     "genDir": "../aot",
     "skipMetadataEmit": false
   }

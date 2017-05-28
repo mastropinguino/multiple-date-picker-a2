@@ -6,6 +6,7 @@
     "experimentalDecorators": true,
     "sourceMap": false,
     "moduleResolution": "node",
+    "lib": ["es2015", "dom"],
     "outFile": "../dist/multiple-date-picker-a2-bundle.js"
   },
   "files": [

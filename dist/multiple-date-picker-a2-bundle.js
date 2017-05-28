@@ -160,7 +160,6 @@ System.register("multiple-date-picker.component", ["@angular/core", "@angular/fo
                         day.mdp.selected = !day.mdp.selected;
                         if (day.mdp.selected) {
                             this.projectScope.push(day.date);
-                            // console.log('this project scope = ' + this.projectScope); // for testing keep!
                         }
                         else {
                             var idx = -1;

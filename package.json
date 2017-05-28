@@ -1,6 +1,6 @@
 {
   "name": "multiple-date-picker-a2",
-  "version": "2.5.4",
+  "version": "2.5.5",
   "description": "Multiple Date Picker for Angular* (angular 2+)",
   "main": "index.js",
   "scripts": {
@@ -31,17 +31,6 @@
   "author": "Christian Holes <xtianus@live.com>",
   "license": "MIT",
   "devDependencies": {
-    "@angular/common": "^2.4.3",
-    "@angular/compiler": "^2.4.3",
-    "@angular/compiler-cli": "^2.4.3",
-    "@angular/core": "^2.4.3",
-    "@angular/forms": "^2.4.3",
-    "@angular/platform-browser": "^2.4.3",
-    "@angular/platform-browser-dynamic": "^2.4.3",
-    "@angular/platform-server": "^2.4.3",
-    "@angular/router": "3.4.3",
-    "@ngtools/webpack": "1.1.4",
-    "@types/es6-shim": "^0.31.32",
     "@types/node": "^6.0.45",
     "angular2-template-loader": "0.6.0",
     "bulma": "0.2.3",
